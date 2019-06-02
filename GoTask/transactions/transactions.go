@@ -700,7 +700,7 @@ func CancelTransaction(w http.ResponseWriter, r *http.Request) {
 				}
 			}
 			tx.Commit()
-			err = json.NewEncoder(w).Encode("Транзакция была успешна отмененна")
+			err = json.NewEncoder(w).Encode("Transaction was canceled successfully")
 			if err != nil {
 				log.Panic("Could not return responce")
 			}
